@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>HawkLixiServiceClient</name>
+ <channel>pear.php.net</channel>
+ <summary>Connecting to HTW&apos;s Hawk platform for valuation requests via REST</summary>
+ <description>Connecting to HTW&apos;s Hawk platform for valuation requests via REST</description>
+ <lead>
+  <name>Daniel O&apos;Connor</name>
+  <user>doconnor</user>
+  <email>daniel.oconnor@htw.com.au</email>
+  <active>yes</active>
+ </lead>
+ <date>2013-08-27</date>
+ <time>08:04:27</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP License</license>
+ <notes>
+Initial release
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="a2497a5d9f9eb98451baffc20e15035c" name="Hawk/HawkLixiServiceClient.php" role="php" />
+   <file baseinstalldir="/" md5sum="24d47c55e1caa47e1f11c97b1cfc5c17" name="example.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+   <package>
+    <name>HTTP_Request2</name>
+    <channel>pear.php.net</channel>
+    <min>0.5.0</min>
+   </package>
+   <package>
+    <name>Log</name>
+    <channel>pear.php.net</channel>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2013-08-27</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+Initial release
+   </notes>
+  </release>
+ </changelog>
+</package>
