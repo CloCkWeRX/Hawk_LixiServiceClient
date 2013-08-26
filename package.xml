@@ -11,7 +11,7 @@
   <active>yes</active>
  </lead>
  <date>2013-08-27</date>
- <time>08:04:27</time>
+ <time>08:53:18</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -26,8 +26,11 @@ Initial release
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <file baseinstalldir="/" md5sum="a2497a5d9f9eb98451baffc20e15035c" name="Hawk/HawkLixiServiceClient.php" role="php" />
-   <file baseinstalldir="/" md5sum="24d47c55e1caa47e1f11c97b1cfc5c17" name="example.php" role="php" />
+   <file baseinstalldir="/" md5sum="695b9be50501f6d642f87d54d29bab80" name="Hawk/Exception.php" role="php" />
+   <file baseinstalldir="/" md5sum="19bcbbb7166e8c296dfe3f95170ea6d7" name="Hawk/LixiServiceClient.php" role="php" />
+   <file baseinstalldir="/" md5sum="e610afeaa2b89c86745b1fbedd28b664" name="example.php" role="php" />
+   <file baseinstalldir="/" md5sum="1ae714b6b44c41dc086b15661266ff28" name="LICENSE" role="data" />
+   <file baseinstalldir="/" md5sum="c0c3bac6844cf56d6571736bac69543e" name="README.md" role="data" />
   </dir>
  </contents>
  <dependencies>
