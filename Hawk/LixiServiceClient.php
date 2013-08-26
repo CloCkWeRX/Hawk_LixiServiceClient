@@ -48,6 +48,6 @@ class Hawk_LixiServiceClient {
 			return true;
 		}
 
-		throw new Hawk_Exception("Received HTTP Response " . $response->getStatus());
+		throw new Hawk_Exception($response->getBody(), $response->getStatus());
 	}
 }
