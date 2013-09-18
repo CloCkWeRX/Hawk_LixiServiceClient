@@ -36,6 +36,38 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
+
+	public function clarity_provided($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'clarity_provided', $xml)->send()
+		);
+	}
+
+	public function added_to_compliance($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'added_to_compliance', $xml)->send()
+		);
+	}
+
+	public function bounced_from_compliance($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'bounced_from_compliance', $xml)->send()
+		);
+	}
+
+	public function milestone_update($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'milestone_update', $xml)->send()
+		);
+	}
+
+
+	public function reject_action_update($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'reject_action_update', $xml)->send()
+		);
+	}
+
 	protected function prepare_request($request, $name, $payload) {
 		$request->setBody($payload);
 		$request->setURL($this->endpoint . $name);
