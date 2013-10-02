@@ -10,11 +10,11 @@
   <email>daniel.oconnor@htw.com.au</email>
   <active>yes</active>
  </lead>
- <date>2013-09-18</date>
- <time>15:07:04</time>
+ <date>2013-10-02</date>
+ <time>10:27:51</time>
  <version>
-  <release>0.2.0</release>
-  <api>0.2.0</api>
+  <release>0.3.0</release>
+  <api>0.3.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -22,21 +22,13 @@
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
-Added clarityProvided
-
-addedToCompliance
-
-bouncedFromCompliance
-
-milestoneUpdate
-
-rejectActionUpdate
+Added debugging helpers
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <file baseinstalldir="/" md5sum="695b9be50501f6d642f87d54d29bab80" name="Hawk/Exception.php" role="php" />
-   <file baseinstalldir="/" md5sum="6fec38fa533c68a5ae4c62ff8857fe21" name="Hawk/LixiServiceClient.php" role="php" />
-   <file baseinstalldir="/" md5sum="80f3b241ec445fbce86c7b063f519b77" name="example.php" role="php" />
+   <file baseinstalldir="/" md5sum="964ea728dbdb2da2ee9731c754071f47" name="Hawk/LixiServiceClient.php" role="php" />
+   <file baseinstalldir="/" md5sum="8ed05da979f4445fbcc7d335fd312344" name="example.php" role="php" />
    <file baseinstalldir="/" md5sum="1ae714b6b44c41dc086b15661266ff28" name="LICENSE" role="data" />
    <file baseinstalldir="/" md5sum="c0c3bac6844cf56d6571736bac69543e" name="README.md" role="data" />
   </dir>
@@ -98,6 +90,21 @@ bouncedFromCompliance
 milestoneUpdate
 
 rejectActionUpdate
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.3.0</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2013-10-02</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+Added debugging helpers
    </notes>
   </release>
  </changelog>
