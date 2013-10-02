@@ -4,6 +4,9 @@ require 'Hawk/Exception.php';
 
 class Hawk_LixiServiceClient {
 	
+	protected $last_response;
+	protected $request;
+
 	public function __construct(HTTP_Request2 $request, $endpoint) {
 		$this->request = $request;
 		$this->endpoint = $endpoint;
@@ -76,10 +79,28 @@ class Hawk_LixiServiceClient {
 	}
 
 	protected function assess_response($response) {
+		$this->last_response = $response;
+
 		if ($response->getStatus() == 200) {
 			return true;
 		}
 
 		throw new Hawk_Exception($response->getBody(), $response->getStatus());
+	}
+
+	public function __getLastRequest() {
+		return $this->request->getBody();
+	}
+
+	public function __getLastResponse() {
+		return $this->last_response->getBody();
+	}
+
+	public function __getLastRequestHeaders() {
+		return print_r($this->request->getHeaders(), true);
+	}
+
+	public function __getLastResponseHeaders() {
+		return print_r($this->last_response->getHeader(), true);
 	}
 }
