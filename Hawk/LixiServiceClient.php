@@ -71,14 +71,14 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
-	protected function prepare_request($request, $name, $payload) {
+	protected function prepare_request(HTTP_Request2 $request, $name, $payload) {
 		$request->setBody($payload);
 		$request->setURL($this->endpoint . $name);
 
 		return $request;
 	}
 
-	protected function assess_response($response) {
+	protected function assess_response(HTTP_Request2_Response $response) {
 		$this->last_response = $response;
 
 		if ($response->getStatus() == 200) {
@@ -89,18 +89,18 @@ class Hawk_LixiServiceClient {
 	}
 
 	public function __getLastRequest() {
-		return $this->request->getBody();
+		return !empty($this->request) ? $this->request->getBody() : null;
 	}
 
 	public function __getLastResponse() {
-		return $this->last_response->getBody();
+		return !empty($this->last_response) ? $this->last_response->getBody() : null;
 	}
 
 	public function __getLastRequestHeaders() {
-		return print_r($this->request->getHeaders(), true);
+		return !empty($this->request) ? print_r($this->request->getHeaders(), true) : null;
 	}
 
 	public function __getLastResponseHeaders() {
-		return print_r($this->last_response->getHeader(), true);
+		return !empty($this->last_response) ? print_r($this->last_response->getHeader(), true) : null;
 	}
 }
