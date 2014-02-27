@@ -10,11 +10,11 @@
   <email>daniel.oconnor@htw.com.au</email>
   <active>yes</active>
  </lead>
- <date>2013-10-02</date>
- <time>10:27:51</time>
+ <date>2014-02-27</date>
+ <time>02:58:18</time>
  <version>
-  <release>0.3.0</release>
-  <api>0.3.0</api>
+  <release>0.4.0</release>
+  <api>0.4.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -22,13 +22,13 @@
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
-Added debugging helpers
+Change the clarity_provided signature to deal with the different params.
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <file baseinstalldir="/" md5sum="695b9be50501f6d642f87d54d29bab80" name="Hawk/Exception.php" role="php" />
-   <file baseinstalldir="/" md5sum="964ea728dbdb2da2ee9731c754071f47" name="Hawk/LixiServiceClient.php" role="php" />
-   <file baseinstalldir="/" md5sum="8ed05da979f4445fbcc7d335fd312344" name="example.php" role="php" />
+   <file baseinstalldir="/" md5sum="9be23401580f1d46225fa66b42ebdce2" name="Hawk/LixiServiceClient.php" role="php" />
+   <file baseinstalldir="/" md5sum="8f0e80278874a51f853e0b69ef6c5075" name="example.php" role="php" />
    <file baseinstalldir="/" md5sum="1ae714b6b44c41dc086b15661266ff28" name="LICENSE" role="data" />
    <file baseinstalldir="/" md5sum="c0c3bac6844cf56d6571736bac69543e" name="README.md" role="data" />
   </dir>
@@ -105,6 +105,21 @@ rejectActionUpdate
    <license uri="http://www.php.net/license">PHP License</license>
    <notes>
 Added debugging helpers
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.4.0</release>
+    <api>0.4.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2014-02-27</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+Change the clarity_provided signature to deal with the different params.
    </notes>
   </release>
  </changelog>
