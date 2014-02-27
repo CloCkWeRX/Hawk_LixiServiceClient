@@ -40,10 +40,14 @@ class Hawk_LixiServiceClient {
 	}
 
 
-	public function clarity_provided($xml) {
-		return $this->assess_response(
-			$this->prepare_request($this->request, 'clarity_provided', $xml)->send()
+	public function clarity_provided($job_id, $comment) {
+		// This has an empty payload
+		$this->request->setURL($this->endpoint . 'clarity_provided');
+		$this->request->addPostParameter(
+			array('job_id' => $job_id, 'comment' => $comment)
 		);
+
+		return $this->assess_response($this->request->send());
 	}
 
 	public function added_to_compliance($xml) {
