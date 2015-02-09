@@ -39,6 +39,17 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
+	public function updateAddress($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'update_address', $xml)->send()
+		);
+	}
+
+	public function updateFee($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'update_fee', $xml)->send()
+		);
+	}
 
 	public function clarity_provided($job_id, $comment) {
 		// This has an empty payload
