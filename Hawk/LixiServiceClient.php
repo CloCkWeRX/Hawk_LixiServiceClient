@@ -81,9 +81,13 @@ class Hawk_LixiServiceClient {
 
 
 	public function reject_action_update($xml) {
-		return $this->assess_response(
-			$this->prepare_request($this->request, 'reject_action_update', $xml)->send()
+		// This has an empty payload
+		$this->request->setURL($this->endpoint . 'reject_action_update');
+		$this->request->addPostParameter(
+			array('job_id' => $job_id, 'comment' => $comment)
 		);
+
+		return $this->assess_response($this->request->send());
 	}
 
 	public function query($xml) {
