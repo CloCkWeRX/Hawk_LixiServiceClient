@@ -80,7 +80,7 @@ class Hawk_LixiServiceClient {
 	}
 
 
-	public function reject_action_update($xml) {
+	public function reject_action_update($job_id, $comment) {
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'reject_action_update');
 		$this->request->addPostParameter(
