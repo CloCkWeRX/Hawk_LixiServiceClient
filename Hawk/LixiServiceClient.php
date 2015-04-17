@@ -79,7 +79,7 @@ class Hawk_LixiServiceClient {
 		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
-		$this->request->setURL($this->endpoint . 'reject_action_update');
+		$this->request->setURL($this->endpoint . 'milestone_update');
 		$this->request->addPostParameter(
 			array(
 				'job_id' => $job_id, 
