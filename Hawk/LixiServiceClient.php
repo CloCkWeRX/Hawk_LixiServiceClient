@@ -75,10 +75,20 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
-	public function milestone_update($xml) {
-		return $this->assess_response(
-			$this->prepare_request($this->request, 'milestone_update', $xml)->send()
+	public function milestone_update($job_id, $milestone_code, $time)) {
+		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+
+		// This has an empty payload
+		$this->request->setURL($this->endpoint . 'reject_action_update');
+		$this->request->addPostParameter(
+			array(
+				'job_id' => $job_id, 
+				'time' => $time,
+				'milestone_code' => $milestone_code
+			)
 		);
+
+		return $this->assess_response($this->request->send());
 	}
 
 
