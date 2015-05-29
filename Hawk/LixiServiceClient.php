@@ -63,15 +63,31 @@ class Hawk_LixiServiceClient {
 		return $this->assess_response($this->request->send());
 	}
 
-	public function added_to_compliance($xml) {
+	public function added_to_compliance($job_id) {
+		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+
+		// This has an empty payload
+		$this->request->setURL($this->endpoint . 'added_to_compliance');
+		$this->request->addPostParameter(
+			array('job_id' => $job_id)
+		);
+
 		return $this->assess_response(
-			$this->prepare_request($this->request, 'added_to_compliance', $xml)->send()
+			$this->prepare_request($this->request->send())
 		);
 	}
 
-	public function bounced_from_compliance($xml) {
+	public function bounced_from_compliance($job_id) {
+		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+
+		// This has an empty payload
+		$this->request->setURL($this->endpoint . 'bounced_from_compliance');
+		$this->request->addPostParameter(
+			array('job_id' => $job_id)
+		);
+
 		return $this->assess_response(
-			$this->prepare_request($this->request, 'bounced_from_compliance', $xml)->send()
+			$this->prepare_request($this->request->send())
 		);
 	}
 
@@ -91,6 +107,9 @@ class Hawk_LixiServiceClient {
 		return $this->assess_response($this->request->send());
 	}
 
+	public function escalate($xml, $service_id, $reason) {
+
+	}
 
 	public function reject_action_update($job_id, $comments) {
 		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
