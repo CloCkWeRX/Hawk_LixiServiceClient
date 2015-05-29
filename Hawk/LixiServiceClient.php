@@ -77,13 +77,13 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
-	public function bounced_from_compliance($job_id) {
+	public function bounced_from_compliance($job_id, $comment) {
 		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'bounced_from_compliance');
 		$this->request->addPostParameter(
-			array('job_id' => $job_id)
+			array('job_id' => $job_id, 'comment' => $comment)
 		);
 
 		return $this->assess_response(
