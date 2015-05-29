@@ -107,8 +107,20 @@ class Hawk_LixiServiceClient {
 		return $this->assess_response($this->request->send());
 	}
 
-	public function escalate($xml, $service_id, $reason) {
+	public function escalate($job_id, $service_id, $reason) {
+		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
 
+		// This has an empty payload
+		$this->request->setURL($this->endpoint . 'escalate');
+		$this->request->addPostParameter(
+			array(
+				'job_id' => $job_id, 
+				'service_id' => $service_id,
+				'reason' => $reason
+			)
+		);
+
+		return $this->assess_response($this->request->send());
 	}
 
 	public function reject_action_update($job_id, $comments) {
