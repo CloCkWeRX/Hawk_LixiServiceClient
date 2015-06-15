@@ -33,6 +33,12 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
+	public function quoteUpdate($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'quote_update', $xml)->send()
+		);
+	}
+
 	public function update($xml) {
 		return $this->assess_response(
 			$this->prepare_request($this->request, 'update', $xml)->send()
