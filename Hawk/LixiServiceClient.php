@@ -93,7 +93,7 @@ class Hawk_LixiServiceClient {
 		return $this->assess_response($this->request->send());
 	}
 
-	public function milestone_update($job_id, $milestone_code, $time)) {
+	public function milestone_update($job_id, $milestone_code, $time) {
 		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
