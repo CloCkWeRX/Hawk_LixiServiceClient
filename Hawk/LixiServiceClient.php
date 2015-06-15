@@ -78,9 +78,7 @@ class Hawk_LixiServiceClient {
 			array('job_id' => $job_id)
 		);
 
-		return $this->assess_response(
-			$this->prepare_request($this->request->send())
-		);
+		return $this->assess_response($this->request->send());
 	}
 
 	public function bounced_from_compliance($job_id, $comment) {
@@ -92,9 +90,7 @@ class Hawk_LixiServiceClient {
 			array('job_id' => $job_id, 'comment' => $comment)
 		);
 
-		return $this->assess_response(
-			$this->prepare_request($this->request->send())
-		);
+		return $this->assess_response($this->request->send());
 	}
 
 	public function milestone_update($job_id, $milestone_code, $time)) {
