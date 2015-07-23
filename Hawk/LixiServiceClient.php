@@ -27,6 +27,12 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
+	public function response($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'complete', $xml)->send(); // Our routes/endpoint call this 'complete'
+		);
+	}
+
 	public function quote($xml) {
 		return $this->assess_response(
 			$this->prepare_request($this->request, 'quote', $xml)->send()
