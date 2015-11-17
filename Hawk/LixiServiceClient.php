@@ -27,6 +27,12 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
+	public function cancellationRequest($xml, $reason_id, $comments) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'cancellation_request', $xml)->send()
+		);
+	}
+
 	public function response($xml) {
 		return $this->assess_response(
 			$this->prepare_request($this->request, 'complete', $xml)->send(); // Our routes/endpoint call this 'complete'
