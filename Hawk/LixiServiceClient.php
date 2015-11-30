@@ -161,6 +161,12 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
+	public function workflow($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'workflow', $xml)->send()
+		);
+	}
+
 	protected function prepare_request(HTTP_Request2 $request, $name, $payload) {
 		$request->setBody($payload);
 		$request->setURL($this->endpoint . $name);
