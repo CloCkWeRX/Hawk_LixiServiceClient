@@ -167,6 +167,12 @@ class Hawk_LixiServiceClient {
 		);
 	}
 
+	public function delay_note($xml) {
+		return $this->assess_response(
+			$this->prepare_request($this->request, 'delay_note', $xml)->send()
+		);
+	}
+
 	protected function prepare_request(HTTP_Request2 $request, $name, $payload) {
 		$request->setBody($payload);
 		$request->setURL($this->endpoint . $name);
