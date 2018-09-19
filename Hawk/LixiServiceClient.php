@@ -149,10 +149,16 @@ class Hawk_LixiServiceClient {
 		return $this->assess_response($this->request->send());
 	}
 
-	public function query($xml) {
-		return $this->assess_response(
-			$this->prepare_request($this->request, 'query', $xml)->send()
+	public function query($job_id, $reason_id, $comments) {
+		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+
+		// This has an empty payload
+		$this->request->setURL($this->endpoint . 'query');
+		$this->request->addPostParameter(
+			array('job_id' => $job_id, 'reason_id' => $reason_id, 'comments' => $comments)
 		);
+
+		return $this->assess_response($this->request->send());
 	}
 
 	public function status_update($xml) {
