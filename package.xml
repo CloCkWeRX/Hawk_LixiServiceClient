@@ -11,9 +11,9 @@
   <active>yes</active>
  </lead>
  <date>2018-10-23</date>
- <time>11:14:11</time>
+ <time>11:27:31</time>
  <version>
-  <release>0.5.0</release>
+  <release>0.5.1</release>
   <api>0.5.0</api>
  </version>
  <stability>
@@ -22,13 +22,14 @@
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
-Add query service
+Add query service, fix packaging
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <file baseinstalldir="/" md5sum="695b9be50501f6d642f87d54d29bab80" name="Hawk/Exception.php" role="php" />
-   <file baseinstalldir="/" md5sum="71cbfb63693266512d9d2d0b552512b5" name="Hawk/LixiServiceClient.php" role="php" />
+   <file baseinstalldir="/" md5sum="80d1b5ab100a725173405c46d7b8833d" name="Hawk/LixiServiceClient.php" role="php" />
    <file baseinstalldir="/" md5sum="198bafe7dd2baeea8391dc7cf9be87b5" name="example.php" role="php" />
+   <file baseinstalldir="/" md5sum="29b698cbad55961a5833e8b265bf38df" name="Hawk_LixiServiceClient-0.5.0.tgz" role="data" />
    <file baseinstalldir="/" md5sum="1ae714b6b44c41dc086b15661266ff28" name="LICENSE" role="data" />
    <file baseinstalldir="/" md5sum="c0c3bac6844cf56d6571736bac69543e" name="README.md" role="data" />
   </dir>
@@ -135,6 +136,21 @@ Change the clarity_provided signature to deal with the different params.
    <license uri="http://www.php.net/license">PHP License</license>
    <notes>
 Add query service
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.1</release>
+    <api>0.5.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2018-10-23</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+Add query service, fix packaging
    </notes>
   </release>
  </changelog>
