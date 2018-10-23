@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.10.5" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>Hawk_LixiServiceClient</name>
  <channel>clockwerx.github.com/hawk</channel>
  <summary>Connecting to HTW&apos;s Hawk platform for valuation requests via REST</summary>
@@ -10,11 +10,11 @@
   <email>daniel.oconnor@htw.com.au</email>
   <active>yes</active>
  </lead>
- <date>2014-02-27</date>
- <time>02:58:18</time>
+ <date>2018-10-23</date>
+ <time>11:14:11</time>
  <version>
-  <release>0.4.0</release>
-  <api>0.4.0</api>
+  <release>0.5.0</release>
+  <api>0.5.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -22,13 +22,13 @@
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
-Change the clarity_provided signature to deal with the different params.
+Add query service
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <file baseinstalldir="/" md5sum="695b9be50501f6d642f87d54d29bab80" name="Hawk/Exception.php" role="php" />
-   <file baseinstalldir="/" md5sum="9be23401580f1d46225fa66b42ebdce2" name="Hawk/LixiServiceClient.php" role="php" />
-   <file baseinstalldir="/" md5sum="8f0e80278874a51f853e0b69ef6c5075" name="example.php" role="php" />
+   <file baseinstalldir="/" md5sum="71cbfb63693266512d9d2d0b552512b5" name="Hawk/LixiServiceClient.php" role="php" />
+   <file baseinstalldir="/" md5sum="198bafe7dd2baeea8391dc7cf9be87b5" name="example.php" role="php" />
    <file baseinstalldir="/" md5sum="1ae714b6b44c41dc086b15661266ff28" name="LICENSE" role="data" />
    <file baseinstalldir="/" md5sum="c0c3bac6844cf56d6571736bac69543e" name="README.md" role="data" />
   </dir>
@@ -120,6 +120,21 @@ Added debugging helpers
    <license uri="http://www.php.net/license">PHP License</license>
    <notes>
 Change the clarity_provided signature to deal with the different params.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.5.0</release>
+    <api>0.5.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2018-10-23</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+Add query service
    </notes>
   </release>
  </changelog>
