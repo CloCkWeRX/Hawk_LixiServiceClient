@@ -12,7 +12,7 @@ class Hawk_LixiServiceClient {
 		$this->endpoint = $endpoint;
 
 		$this->request->setMethod(HTTP_Request2::METHOD_POST);
-		$this->request->setHeader('Content-type: text/xml; charset=utf-8');
+		$this->request->setHeader('Content-Type: text/xml; charset=utf-8');
 	}
 
 	public function order($xml) {
@@ -70,7 +70,7 @@ class Hawk_LixiServiceClient {
 	}
 
 	public function clarity_provided($job_id, $comments) {
-		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+		$this->request->setHeader('Content-Type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'clarity_provided');
@@ -82,7 +82,7 @@ class Hawk_LixiServiceClient {
 	}
 
 	public function added_to_compliance($job_id) {
-		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+		$this->request->setHeader('Content-Type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'added_to_compliance');
@@ -94,7 +94,7 @@ class Hawk_LixiServiceClient {
 	}
 
 	public function bounced_from_compliance($job_id, $comment) {
-		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+		$this->request->setHeader('Content-Type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'bounced_from_compliance');
@@ -106,7 +106,7 @@ class Hawk_LixiServiceClient {
 	}
 
 	public function milestone_update($job_id, $milestone_code, $time) {
-		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+		$this->request->setHeader('Content-Type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'milestone_update');
@@ -122,7 +122,7 @@ class Hawk_LixiServiceClient {
 	}
 
 	public function escalate($job_id, $service_id, $reason) {
-		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+		$this->request->setHeader('Content-Type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'escalate');
@@ -138,7 +138,7 @@ class Hawk_LixiServiceClient {
 	}
 
 	public function reject_action_update($job_id, $comments) {
-		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+		$this->request->setHeader('Content-Type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'reject_action_update');
@@ -150,7 +150,7 @@ class Hawk_LixiServiceClient {
 	}
 
 	public function query($job_id, $reason_id, $comments) {
-		$this->request->setHeader('Content-type: application/x-www-form-urlencoded');
+		$this->request->setHeader('Content-Type: application/x-www-form-urlencoded');
 
 		// This has an empty payload
 		$this->request->setURL($this->endpoint . 'query');
